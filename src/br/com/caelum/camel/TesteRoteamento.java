@@ -15,6 +15,9 @@ public class TesteRoteamento {
 
 			@Override
 			public void configure() throws Exception {
+
+				errorHandler(deadLetterChannel("file:falha"));
+
 				from("file:entrada?delay=5s")
 						.log(LoggingLevel.INFO, "Processando mensagem ${id}")
 						.bean(ValidadorPedido.class, "validar")
