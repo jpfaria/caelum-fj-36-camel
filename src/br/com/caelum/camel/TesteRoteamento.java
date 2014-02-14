@@ -8,18 +8,22 @@ import org.apache.camel.impl.DefaultCamelContext;
 public class TesteRoteamento {
 
 	public static void main(String[] args) throws Exception {
-		
+
 		CamelContext context = new DefaultCamelContext();
-		
+
 		context.addRoutes(new RouteBuilder() {
 
 			@Override
 			public void configure() throws Exception {
-				from("file:entrada?delay=5s").log(LoggingLevel.INFO, "Processando mensagem ${id}").to("file:saida");
+				from("file:entrada?delay=5s")
+						.log(LoggingLevel.INFO, "Processando mensagem ${id}")
+						.transform(
+								body(String.class).regexReplaceAll("nomeAutor",
+										"autor")).to("file:saida");
 			}
-			
+
 		});
-		
+
 		context.start();
 		Thread.sleep(30 * 1000);
 		context.stop();
