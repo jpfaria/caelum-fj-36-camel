@@ -9,7 +9,7 @@
                 <codigo>TDD</codigo>
                 <titulo>Test-Driven Development: Teste e Design no Mundo Real</titulo>
                 <tituloCurto>TDD</tituloCurto>
-                <nomeAutor>Mauricio Aniche</nomeAutor>
+                <autor>Mauricio Aniche</autor>
                 <valorEbook>29.90</valorEbook>
                 <valorImpresso>59.90</valorImpresso>
             </livro>

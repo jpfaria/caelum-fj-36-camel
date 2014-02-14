@@ -9,7 +9,7 @@
                 <codigo>SOA</codigo>
                 <titulo>SOA aplicado: Integrando com web services e além</titulo>
                 <tituloCurto>SOA</tituloCurto>
-                <nomeAutor>Alexandre Saudate</nomeAutor>
+                <autor>Alexandre Saudate</autor>
                 <valorEbook>29.90</valorEbook>
                 <valorImpresso>59.90</valorImpresso>
             </livro>
@@ -21,7 +21,7 @@
                 <codigo>ARQ</codigo>
                 <titulo>Introdução à Arquitetura e Design de Software</titulo>
                 <tituloCurto>Arquitetura Java</tituloCurto>
-                <nomeAutor>Paulo Silveira</nomeAutor>
+                <autor>Paulo Silveira</autor>
                 <valorEbook>29.90</valorEbook>
                 <valorImpresso>79.90</valorImpresso>
             </livro>

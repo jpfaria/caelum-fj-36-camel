@@ -9,7 +9,7 @@
                 <codigo>ARQ</codigo>
                 <titulo>Introdução à Arquitetura e Design de Software</titulo>
                 <tituloCurto>Arquitetura Java</tituloCurto>
-                <nomeAutor>Paulo Silveira</nomeAutor>
+                <autor>Paulo Silveira</autor>
                 <valorEbook>29.90</valorEbook>
                 <valorImpresso>79.90</valorImpresso>
             </livro>
