@@ -16,7 +16,13 @@ public class TesteRoteamento {
 			@Override
 			public void configure() throws Exception {
 
-				errorHandler(deadLetterChannel("file:falha"));
+				onException(RuntimeException.class)
+						.log("Exceção processando ${file:name}").handled(true)
+						.to("file:exception");
+
+				errorHandler(deadLetterChannel("file:falha")
+						.maximumRedeliveries(2).redeliveryDelay(2000)
+						.useOriginalMessage());
 
 				from("file:entrada?delay=5s")
 						.log(LoggingLevel.INFO, "Processando mensagem ${id}")
