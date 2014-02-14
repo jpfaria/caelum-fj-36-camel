@@ -17,6 +17,7 @@ public class TesteRoteamento {
 			public void configure() throws Exception {
 				from("file:entrada?delay=5s")
 						.log(LoggingLevel.INFO, "Processando mensagem ${id}")
+						.bean(ValidadorPedido.class, "validar")
 						.transform(
 								body(String.class).regexReplaceAll("nomeAutor",
 										"autor")).to("file:saida");
